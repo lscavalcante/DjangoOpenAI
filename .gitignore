@@ -1,0 +1,22 @@
+# Django settings and local settings
+*.pyc
+__pycache__/
+local_settings.py
+
+# Environment variables
+.env
+
+# SQLite database
+db.sqlite3
+
+# Media files
+media/
+
+# Static files
+static/
+
+# Secret key
+secret_key.txt
+
+# Virtual environment
+venv/

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>Django Open AI</h1>
+
+    <form method="post" autocomplete="off">
+        {% csrf_token %}
+        <input type="text" required minlength="3" placeholder="Describe your image..." class="form-control"
+               name="user_input"/>
+        <button type="submit" class="btn btn-primary mt-3 mb-3 w-100">Submit</button>
+        {% for url in urls %}
+            <div class="text-center">
+                <h2>{{ user_input }}</h2>
+                <img src={{ url }} class="img-fluid" alt="OpenAIImage">
+            </div>
+        {% endfor url in urls %}
+    </form>
+
+    <br/>
+{% endblock content %}
